@@ -64,6 +64,7 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MappingHelper.cs" />
     <Compile Include="Helpers\ResourcesHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +87,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\ServiceHR.DataAccessLayer.ViewModel.EmployeeViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,6 +162,14 @@
     <None Include="Resources\user%281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\email.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\dismiss.png" />
+    <None Include="Resources\edit%281%29.png" />
+    <None Include="Resources\add%281%29.png" />
+    <Content Include="Resources\add.png" />
+    <None Include="Resources\add1.png" />
     <Content Include="Resources\close.png" />
     <Content Include="Resources\cross-circle.png" />
   </ItemGroup>

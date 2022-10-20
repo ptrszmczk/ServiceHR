@@ -21,6 +21,7 @@ namespace SystemHR.UserInterface.Forms
         private TabPage _tpContracts;
 
         #endregion
+
         #region Constructor
         public MainForm()
         {
@@ -28,6 +29,7 @@ namespace SystemHR.UserInterface.Forms
         }
 
         #endregion
+
         #region Events
         private void btnEmployees_Click(object sender, EventArgs e)
         {
@@ -91,6 +93,7 @@ namespace SystemHR.UserInterface.Forms
         }
 
         #endregion
+
         #region Private Methods
         private void ShowFormInTabPage(TabPage tpTab, Form frm)
         {
