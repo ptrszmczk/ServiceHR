@@ -139,5 +139,11 @@ namespace ServiceHR.UserInterface.Forms.Employees
             _instance = null;
         }
         #endregion
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            EmployeeAddForm frm = new EmployeeAddForm();
+            frm.ShowDialog();
+        }
     }
 }
