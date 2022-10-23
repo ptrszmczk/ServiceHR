@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\EmployeeEventArgs.cs" />
+    <Compile Include="Extentions\ExtentionsMethods.cs" />
     <Compile Include="Forms\Base\BaseAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +86,7 @@
     </Compile>
     <Compile Include="Helpers\MappingHelper.cs" />
     <Compile Include="Helpers\ResourcesHelper.cs" />
+    <Compile Include="Helpers\ValidatorHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Base\BaseAddEditForm.resx">
@@ -114,6 +117,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\ServiceHR.DataAccessLayer.Models.Dictionaries.GenderModel.datasource" />
     <None Include="Properties\DataSources\ServiceHR.DataAccessLayer.ViewModel.EmployeeViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

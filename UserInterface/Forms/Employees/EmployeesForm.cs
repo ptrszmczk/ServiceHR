@@ -1,6 +1,7 @@
 ﻿using ServiceHR.DataAccessLayer.Models;
 using ServiceHR.DataAccessLayer.Models.Dictionaries;
 using ServiceHR.DataAccessLayer.ViewModel;
+using ServiceHR.UserInterface.Classes;
 using ServiceHR.UserInterface.Helpers;
 using System;
 using System.Collections.Generic;
@@ -138,12 +139,28 @@ namespace ServiceHR.UserInterface.Forms.Employees
         {
             _instance = null;
         }
-        #endregion
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             EmployeeAddForm frm = new EmployeeAddForm();
+
+            frm.ReloadEmployees += (s, ea) =>
+            {
+                EmployeeEventArgs eventArgs = ea as EmployeeEventArgs;
+
+                if (eventArgs != null)
+                {
+                    EmployeeViewModel employee = MappingHelper.MapEmployeeModelToEmployeeViewModel(eventArgs.Employee);
+                    bsEmployees.Add(employee);
+
+                    dgvEmployees.ClearSelection();
+                    dgvEmployees.Rows[dgvEmployees.Rows.Count - 1].Selected = true;
+                }
+            };
+
             frm.ShowDialog();
         }
+        #endregion
+
     }
 }
